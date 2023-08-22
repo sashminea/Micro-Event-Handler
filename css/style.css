@@ -1,0 +1,90 @@
+html, body {
+    background: linear-gradient(to bottom, #000000, #111111);
+    color: rgb(255, 255, 255);
+    height: 100%;
+   
+}
+
+body {
+    overflow: hidden;
+}
+
+.title{
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #3498db, #abbdef);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: block;
+
+}
+
+.dust {
+    position: absolute;
+    width: 0.5px;
+    height: 0.5px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    opacity: 0.5;
+    animation: float 5s linear infinite;
+   
+}
+
+@keyframes float {
+    0% {
+       opacity: 0;
+       transform: translateY(-30vh);
+    }
+    10% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.custom-btn {
+    width: 160px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    font-weight: 500;
+  }
+
+.counter{
+    background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    border: none;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+    width: max-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    place-items: center;
+    
+    top: 50%;
+    transform: translate(0, -50%);
+}

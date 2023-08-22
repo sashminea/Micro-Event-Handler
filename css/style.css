@@ -69,9 +69,18 @@ body {
 
 .counter{
     background: rgb(96,9,240);
-    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+    background: linear-gradient(45deg, rgba(96,9,240,1) 4%, rgba(129,5,240,1) 100%);
     border: none;
     
+}
+
+.reset{
+    background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgb(239, 87, 74) 90%, rgb(250, 43, 6) 100%);
+    border: none;
+    font-size: x-small;
+    width: fit-content;
+    text-align: center;
 }
 
 .container{

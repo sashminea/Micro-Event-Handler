@@ -87,7 +87,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 45px;
+    gap: 35px;
     width: max-content;
     position: relative;
     margin-left: auto;
@@ -96,4 +96,18 @@ body {
     
     top: 50%;
     transform: translate(0, -50%);
+}
+
+.counters{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.bg-changer{
+    background: rgb(96,9,240);
+    background: linear-gradient(60deg, rgb(158, 78, 172) 90%, rgb(181, 47, 183) 100%);
+    border: none;
+    width: 227px;
 }

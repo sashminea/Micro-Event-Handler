@@ -8,7 +8,6 @@
 - Create a customizable hover effect that follows the cursor.
 - Increment a counter with a single click and reset it to zero.
 - Capture user input and display dynamic alerts.
-- Generate dynamic particle effects with adjustable colors.
 
 ## Why Micro Event Handler?
 

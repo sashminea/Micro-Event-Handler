@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const bgchanger = document.getElementById("bgChanger");
     const title = document.getElementById("title");
     const hover = document.getElementById('hover-effect');
+    const alertIn = document.getElementById('alert-input')
+    const alertButton = document.getElementById('alert-submit');
 
     var bgFlag = 0;
 
@@ -27,12 +29,16 @@ document.addEventListener('DOMContentLoaded', function () {
             bgchanger.style.color = "black";
             title.style.backgroundImage = "linear-gradient(45deg, #5c92af, #4f7a9e)";
             hover.style.backgroundColor  = "rgba(0, 0, 0, 0.118)";
+            alertIn.style.backgroundColor = "#ebebeb";
+            alertIn.style.color = "black";
             bgFlag = 1;
         } else {
             container.style.backgroundImage = "linear-gradient(to bottom, #000000, #111111)";
             bgchanger.style.color = "white";
             title.style.backgroundImage = "linear-gradient(45deg, #3498db, #abbdef)";
             hover.style.backgroundColor  = "rgba(255, 255, 255, 0.118)";
+            alertIn.style.backgroundColor = "#000000";
+            alertIn.style.color = "white";
             bgFlag = 0;
         }
     }
@@ -48,6 +54,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const mouseY = e.clientY;
 
         hover.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    }
+
+    alertButton.addEventListener('click', alerter);
+
+    function alerter() {
+        const inputValue = alertIn.value;
+
+        if(inputValue === ``){
+
+        }
+        else{
+        alert(`${inputValue}`);
+        }
     }
 
     for (let i = 0; i < numParticles; i++) {

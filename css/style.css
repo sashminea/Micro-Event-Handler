@@ -79,7 +79,7 @@ body {
     background: linear-gradient(0deg, rgb(239, 87, 74) 90%, rgb(250, 43, 6) 100%);
     border: none;
     font-size: x-small;
-    width: fit-content;
+    width: 60px;
     text-align: center;
 }
 
@@ -129,6 +129,37 @@ body {
 
     position: relative;
     left: -30px;
-    top: -110px;
+    top: -200px;
     transition: background-color 0.3s ease;
+}
+
+.alert-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.alert-input{
+    padding: 9px;
+    width: 140px;
+    height: 25px;
+    border-radius: 6px;
+    border: 0;
+    color: azure;
+    background-color: #000000;
+    text-align: center;
+    position: relative;
+    top: -2px;
+}
+
+
+.alert{
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(96,9,240);
+    background: linear-gradient(0deg, rgb(239, 87, 74) 90%, rgb(250, 43, 6) 100%);
+    border: none;
+    font-size:medium;
+    width: 60px;
+    text-align: center;
 }

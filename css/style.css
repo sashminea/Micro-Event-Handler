@@ -24,8 +24,8 @@ body {
 
 .dust {
     position: absolute;
-    width: 0.5px;
-    height: 0.5px;
+    width: 0.7px;
+    height: 0.7px;
     background-color: #ffffff;
     border-radius: 100%;
     opacity: 0.5;
@@ -167,8 +167,10 @@ body {
 .count-container{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10rem;
+    color: white;
     opacity: 10%;
+    letter-spacing: 15px;
     text-align: center;
     position: relative;
-    top: -200px;
+    top: -190px;
 }

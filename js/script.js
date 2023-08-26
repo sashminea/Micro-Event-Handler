@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const numParticles = 50;
+    const numParticles = 70;
     const container = document.body;
     const count = document.getElementById("count");
     const clicker = document.getElementById("clicker");
@@ -13,6 +13,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var bgFlag = 0;
 
+    function dustParticles(color) {
+        for (let i = 0; i < numParticles; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'dust';
+        
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+        
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+            particle.style.backgroundColor = color;
+            container.appendChild(particle);
+        }
+    }
 
 
     function increment() {
@@ -36,6 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
             hover.style.backgroundColor  = "rgba(0, 0, 0, 0.118)";
             alertIn.style.backgroundColor = "#ebebeb";
             alertIn.style.color = "black";
+            count.style.color = "black"
+
+            dustParticles('black');
+
             bgFlag = 1;
         } else {
             container.style.backgroundImage = "linear-gradient(to bottom, #000000, #111111)";
@@ -44,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hover.style.backgroundColor  = "rgba(255, 255, 255, 0.118)";
             alertIn.style.backgroundColor = "#000000";
             alertIn.style.color = "white";
+            count.style.color = "white"
             bgFlag = 0;
         }
     }
@@ -74,16 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    for (let i = 0; i < numParticles; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'dust';
-    
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
-    
-        particle.style.left = `${x}px`;
-        particle.style.top = `${y}px`;
-    
-        container.appendChild(particle);
-    }
+
+    dustParticles('white');
 });

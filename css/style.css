@@ -96,6 +96,7 @@ body {
     
     top: 42%;
     transform: translate(0, -50%);
+    z-index: 1;
 }
 
 .counters{
@@ -113,13 +114,21 @@ body {
     box-shadow: none;
     position: absolute;
     right: 0;
+    z-index: 1;
 }
 
-.white-particle {
-    background-color: white;
-}
 
-.black-particle {
-    background-color: black;
-}
 
+.hover-effect {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.118);
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    z-index: 0;
+
+    position: relative;
+    left: -30px;
+    top: -110px;
+    transition: background-color 0.3s ease;
+}

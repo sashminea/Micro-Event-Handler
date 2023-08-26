@@ -7,8 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const reset = document.getElementById("reset");
     const bgchanger = document.getElementById("bgChanger");
     const title = document.getElementById("title");
+    const hover = document.getElementById('hover-effect');
 
     var bgFlag = 0;
+
+
 
     function increment() {
         count.textContent = (parseInt(count.textContent) + 1).toString();
@@ -23,19 +26,29 @@ document.addEventListener('DOMContentLoaded', function () {
             container.style.backgroundImage = "linear-gradient(to bottom, #FFF5EE, #FFFAFA)";
             bgchanger.style.color = "black";
             title.style.backgroundImage = "linear-gradient(45deg, #5c92af, #4f7a9e)";
+            hover.style.backgroundColor  = "rgba(0, 0, 0, 0.118)";
             bgFlag = 1;
         } else {
             container.style.backgroundImage = "linear-gradient(to bottom, #000000, #111111)";
             bgchanger.style.color = "white";
             title.style.backgroundImage = "linear-gradient(45deg, #3498db, #abbdef)";
+            hover.style.backgroundColor  = "rgba(255, 255, 255, 0.118)";
             bgFlag = 0;
         }
     }
     
     bgchanger.addEventListener('click', bgChangeFunction);
-
     clicker.addEventListener('click', increment);
     reset.addEventListener('click', cleaner);
+
+    document.addEventListener('mousemove', transformHover);
+
+    function transformHover(e) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        hover.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    }
 
     for (let i = 0; i < numParticles; i++) {
         const particle = document.createElement('div');

@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function increment() {
+        if (count.textContent === " " ||  count.textContent === "" ){
+            count.textContent = "1";
+        }
+        else{
         count.textContent = (parseInt(count.textContent) + 1).toString();
+        }
     }  
     
     function cleaner() {
-        count.textContent = "0";
+        count.textContent = " ";
     }
     
     function bgChangeFunction() {

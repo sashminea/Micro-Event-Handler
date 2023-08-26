@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const clicker = document.getElementById("clicker");
     const reset = document.getElementById("reset");
     const bgchanger = document.getElementById("bgChanger");
-    
+    const title = document.getElementById("title");
+
     var bgFlag = 0;
 
     function increment() {
@@ -20,9 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function bgChangeFunction() {
         if (bgFlag === 0) {
             container.style.backgroundImage = "linear-gradient(to bottom, #FFF5EE, #FFFAFA)";
+            bgchanger.style.color = "black";
+            title.style.backgroundImage = "linear-gradient(45deg, #5c92af, #4f7a9e)";
             bgFlag = 1;
         } else {
             container.style.backgroundImage = "linear-gradient(to bottom, #000000, #111111)";
+            bgchanger.style.color = "white";
+            title.style.backgroundImage = "linear-gradient(45deg, #3498db, #abbdef)";
             bgFlag = 0;
         }
     }
